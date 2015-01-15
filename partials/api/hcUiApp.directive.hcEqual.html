@@ -1,0 +1,33 @@
+<h1><code ng:non-bindable="">hcEqual</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">hcUiApp</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="hcuiapp-directive-page hcuiapp-directive-hcequal-page"><h3 id="description_overview">Overview</h3>
+<p>&#39;hcEqual&#39; directive compares two input elements.
+If these two inputs are equal than the 
+validity will be true otherwise validity will be false.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY hc-equal&gt;
+   ...
+&lt;/ANY&gt;</pre>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="hcuiapp-directive-page hcuiapp-directive-hcequal-page"><h4 id="example_source">Source</h4>
+<div source-edit="hcUiApp" source-edit-deps="angular.js" source-edit-html="index.html-11" source-edit-css="" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-11" ng-html-wrap-loaded="hcUiApp angular.js"></pre>
+<script type="text/ng-template" id="index.html-11">
+    <form name="dummyForm">
+        <input type="text" name="firstValue" id="firstInput" ng-model="model1" >
+        <input type="text" name="secondValue" hc-equal="model1" id="secondInput" ng-model="model2" >
+    </form>
+    Validity: {{dummyForm.$valid}}
+ </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="hcUiApp" ng-set-html="index.html-11" ng-eval-javascript=""></div>
+</div></div>
+</div>

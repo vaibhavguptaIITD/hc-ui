@@ -1,0 +1,61 @@
+<h1><code ng:non-bindable="">hcFileUpload</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">hcUiApp</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="hcuiapp-directive-page hcuiapp-directive-hcfileupload-page"><h3 id="description_overview">Overview</h3>
+<p>&#39;hcFileUpload&#39; directive is used to upload the files.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/hcUiApp.templateURL">templateURL</a></code>
+</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY hc-file-upload&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="hcuiapp-directive-page hcuiapp-directive-hcfileupload-page"><h4 id="example_source">Source</h4>
+<div source-edit="hcUiApp" source-edit-deps="angular.js" source-edit-html="index.html-12" source-edit-css="" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-12" ng-html-wrap-loaded="hcUiApp angular.js"></pre>
+<script type="text/ng-template" id="index.html-12">
+    <hc-file-upload name="fileUpload" id="fileUploadDirective" action="" options="options"></hc-file-upload>
+
+    <script type="text/ng-template" id="/views/hc-file-upload.html">
+        <form id="fileupload_{{id}}" action="{{action}}" method="POST"
+            enctype="multipart/form-data" data-ng-controller="FileUploadController"
+            data-file-upload="options">
+            <span class="" ng-class="{disabled: disabled}"> <i
+                class="glyphicon glyphicon-plus"></i> <span>Browse</span> <input
+                type="file" name="{{name}}" ng-disabled="disabled">
+            </span>
+            <div class="clearfix">
+                <p>File selected:</p>
+                <div data-ng-repeat="file in queue"
+                    data-ng-class="{'processing': file.$processing()}"
+                    <div ng-hide="file.hide" class="attachedFileBlock col-md-8 offsetB20">
+                      <span ng-hide="file.hide">
+                            <span class="pull-left">{{file.name}}</span>
+                            <strong class="error text-danger">{{file.error}}</strong>
+                            <button type="button" class="close" 
+                                data-ng-click="file.hide = !file.hide">
+                                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                            </button>
+                    </span>
+                </div></div>
+            </div>
+        </form>
+    </script>
+ </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="hcUiApp" ng-set-html="index.html-12" ng-eval-javascript=""></div>
+</div></div>
+</div>

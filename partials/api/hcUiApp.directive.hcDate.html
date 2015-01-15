@@ -1,0 +1,74 @@
+<h1><code ng:non-bindable="">hcDate</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">hcUiApp</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="hcuiapp-directive-page hcuiapp-directive-hcdate-page"><h3 id="description_overview">Overview</h3>
+<p>&#39;hc-date&#39; directive provides three selection inputs for months, days, and years values.
+User will get a drop-down list and can select one option for each of the values to get a required date.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/hcUiApp.templateURL">templateURL</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ngModel">ngModel</a></code>
+</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY hc-date&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="hcuiapp-directive-page hcuiapp-directive-hcdate-page"><h4 id="example_source">Source</h4>
+<div source-edit="hcUiApp" source-edit-deps="angular.js" source-edit-html="index.html-10" source-edit-css="" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-10" ng-html-wrap-loaded="hcUiApp angular.js"></pre>
+<script type="text/ng-template" id="index.html-10">
+    <hc-date name="date" id="date" ng-model="dateCollection" ng-disabeled="disabled"></hc-date>
+    {{dateCollection}}
+    <script type="text/ng-template" id="/views/hc-date.html">
+        <div>
+          <div class="col-md-4 col-sm-4 gutter0">
+            <label for="{{id}}_month" class="sr-only">Month</label>
+            <select class="form-control" id="{{id}}_month" ng-model="dateCollection.month" ng-disabled="disabled">
+              <option value="">MM</option>
+              <option value="01">JAN</option>
+              <option value="02">FEB</option>
+              <option value="03">MARCH</option>
+              <option value="04">APRIL</option>
+              <option value="05">MAY</option>
+              <option value="06">JUNE</option>
+              <option value="07">JULY</option>
+              <option value="08">AUGUST</option>
+              <option value="09">SEPTEMBER</option>
+              <option value="10">OCTOBER</option>
+              <option value="11">NOVEMBER</option>
+              <option value="12">DECEMBER</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-sm-4 gutterL10 gutterR0">
+            <label for="{{id}}_day" class="sr-only">Day</label>
+            <select class="form-control" id="{{id}}_day" ng-model="dateCollection.day" ng-options = "n for n in days" ng-disabled="disabled">
+              <option value="">DD</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-sm-4 gutterL10 gutterR0">
+            <label for="{{id}}_year" class="sr-only">Year</label>
+            <select class="form-control" id="{{id}}_year" ng-model="dateCollection.year" ng-options = "n for n in years" ng-disabled="disabled">
+              <option value="">YYYY</option>
+            </select>
+          </div>
+          <input type="hidden" name="{{name}}" value="{{date}}" ng-disabled="disabled">
+        </div>
+    </script>
+ </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="hcUiApp" ng-set-html="index.html-10" ng-eval-javascript=""></div>
+</div></div>
+</div>

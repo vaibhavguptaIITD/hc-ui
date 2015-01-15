@@ -1,0 +1,31 @@
+<h1><code ng:non-bindable="">hcDateBeforeEqual</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">hcUiApp</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="hcuiapp-directive-page hcuiapp-directive-hcdatebeforeequal-page"><h3 id="description_overview">Overview</h3>
+<p>&#39;hcDateBeforeEqual&#39; directive validate if input date is before or equal a specfic date.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;input type="text" * hc-date-before-equal&gt;
+   ...
+&lt;/input type="text" *&gt;</pre>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="hcuiapp-directive-page hcuiapp-directive-hcdatebeforeequal-page"><h4 id="example_source">Source</h4>
+<div source-edit="hcUiApp" source-edit-deps="angular.js" source-edit-html="index.html-6" source-edit-css="" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-6" ng-html-wrap-loaded="hcUiApp angular.js"></pre>
+<script type="text/ng-template" id="index.html-6">
+    <form name="dummyForm">
+       Date One: <input type="text" name="dateBeforeEqual" hc-date-before-equal="dummyDate" id="dateBeforeEqual" ng-model="dateBeforeEqual" ><br>
+       Date Two: <input type="text" name="dummyDate"  id="dummyDate" ng-model="dummyDate" >
+    </form>
+    Is date one before or equal to date two? : {{dummyForm.$valid}}
+ </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="hcUiApp" ng-set-html="index.html-6" ng-eval-javascript=""></div>
+</div></div>
+</div>

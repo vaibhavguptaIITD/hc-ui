@@ -1,0 +1,30 @@
+<h1><code ng:non-bindable="">hcBudget</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">hcUiApp</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="hcuiapp-directive-page hcuiapp-directive-hcbudget-page"><h3 id="description_overview">Overview</h3>
+<p>&#39;hcBudget&#39; directive validates budget.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;input type="text" * hc-budget&gt;
+   ...
+&lt;/input type="text" *&gt;</pre>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="hcuiapp-directive-page hcuiapp-directive-hcbudget-page"><h4 id="example_source">Source</h4>
+<div source-edit="hcUiApp" source-edit-deps="angular.js" source-edit-html="index.html-3" source-edit-css="" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-3" ng-html-wrap-loaded="hcUiApp angular.js"></pre>
+<script type="text/ng-template" id="index.html-3">
+    <form name="dummyForm">
+       Budget : <input type="text" name="budget" hc-budget id="budget" ng-model="budget" ><br>
+    </form>
+    Is budget valid ? : {{dummyForm.$valid}}
+ </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="hcUiApp" ng-set-html="index.html-3" ng-eval-javascript=""></div>
+</div></div>
+</div>

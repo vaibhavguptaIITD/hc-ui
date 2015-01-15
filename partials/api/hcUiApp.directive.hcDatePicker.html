@@ -1,0 +1,52 @@
+<h1><code ng:non-bindable="">hcDatePicker</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">hcUiApp</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="hcuiapp-directive-page hcuiapp-directive-hcdatepicker-page"><h3 id="description_overview">Overview</h3>
+<p>&#39;hc-date-picker&#39; is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay. 
+Choose a date, click elsewhere on the page (blur the input), or hit the Esc key to close. If a date is chosen, feedback is shown as the input&#39;s value.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ngModel">ngModel</a></code>
+</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;input type="text" hc-date-picker&gt;
+   ...
+&lt;/input type="text"&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="hcuiapp-directive-page hcuiapp-directive-hcdatepicker-page"><h4 id="example_source">Source</h4>
+<div source-edit="hcUiApp" source-edit-deps="angular.js script.js" source-edit-html="index.html-8" source-edit-css="" source-edit-js="script.js-9" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-8" ng-html-wrap-loaded="hcUiApp angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-8">
+  <div ng-controller="DemoController">
+     <form name="dummyForm">
+     	Date: <input type = "text" hc-date-picker="true" name="date" ng-model="date" options ="options">
+     </form>
+  </div>  
+ </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-9"></pre>
+<script type="text/ng-template" id="script.js-9">
+
+    angular.module('hcUiApp')
+    .controller("DemoController", function($scope){
+    	$scope.options = {minDate :new Date()} 
+
+    });
+
+ </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="hcUiApp" ng-set-html="index.html-8" ng-eval-javascript="script.js-9"></div>
+</div></div>
+</div>

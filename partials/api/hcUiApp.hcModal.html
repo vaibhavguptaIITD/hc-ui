@@ -1,0 +1,139 @@
+<h1><code ng:non-bindable="">hcModal</code>
+<div><span class="hint">service in module <code ng:non-bindable="">hcUiApp</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="hcuiapp-hcmodal-page"><p>Service to show alert/confirm message.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$modal">$modal</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/templateURL">templateURL</a></code>
+<div class="hcuiapp-hcmodal-page"><h4 id="dependencies_general-usage">General usage</h4>
+</div></li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_alert">alert(config)</h3>
+<div class="alert"><div class="alert-page"><p>used to show alert dialog on screen</p>
+</div><h5 id="methods_alert_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="alert-page"><p>object to configure the alert.<br>
+config{Object} can have following properties<br>
+msg : Alert  dialog message<br>
+    header:Alert dialog title<br>
+    onClose:handler for close action<br>
+    backdrop:controls presence of a backdrop. Allowed values: true , false(no backdrop), &#39;static&#39; - backdrop is present but modal window is not closed when clicking outside of the modal window, defaults to &#39;static&#39;<br>
+keyboard: indicates whether the dialog should be closable by hitting the ESC key, defaults to true<br>
+size:optional size of modal window. Allowed values: &#39;sm&#39; (small) or &#39;lg&#39; (large). Requires Bootstrap 3.1.0 or later, defaults to &#39;sm&#39;<br></p>
+</div></td></tr></tbody></table><h5 id="methods_alert_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="alert-page"><p>a modal instance, an object with the following properties:<br>
+close(result) - a method that can be used to close a modal, passing a result<br>
+dismiss(reason) - a method that can be used to dismiss a modal, passing a reason    </p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_confirm">confirm(config)</h3>
+<div class="confirm"><div class="confirm-page"><p>used to show confirm dialog on screen</p>
+</div><h5 id="methods_confirm_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="confirm-page"><p>object to configure the confirm.<br>
+config{Object} can have following properties<br>
+    msg : Confirm Message<br>
+          header:Confirm title<br>
+          onAccept:handler for accept action<br>
+          onReject:handler for reject action<br>
+          backdrop:controls presence of a backdrop. Allowed values: true , false(no backdrop), &#39;static&#39; - backdrop is present but modal window is not closed when clicking outside of the modal window, defaults to &#39;static&#39;<br>
+    keyboard: indicates whether the dialog should be closable by hitting the ESC key, defaults to true<br>
+    size:optional size of modal window. Allowed values: &#39;sm&#39; (small) or &#39;lg&#39; (large). Requires Bootstrap 3.1.0 or later, defaults to &#39;sm&#39;<br>
+    btnLabel:{<br>
+        accept:&#39;Yes&#39;, // accept button label<br>
+        reject:&#39;No&#39;// reject button label<br>
+    }<br></p>
+</div></td></tr></tbody></table><h5 id="methods_confirm_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="confirm-page"><p>a modal instance, an object with the following properties:<br>
+close(result) - a method that can be used to close a modal, passing a result<br>
+dismiss(reason) - a method that can be used to dismiss a modal, passing a reason    </p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="hcuiapp-hcmodal-page"><h4 id="example_source">Source</h4>
+<div source-edit="hcUiApp" source-edit-deps="angular.js app.js" source-edit-html="index.html-34" source-edit-css="" source-edit-js="app.js" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-34" ng-html-wrap-loaded="hcUiApp angular.js app.js"></pre>
+<script type="text/ng-template" id="index.html-34">
+   <div ng-controller="TestController">
+     <button class="btn btn-default" ng-click="showAlertDialog()">Open me!</button><br>
+   <script type="text/ng-template" id="/views/hc-alert.html.html">
+   <hc-abstract-modal-header ng-show="showHeader" close-btn=true>
+   <h5 id="example_source_{{title}}">{{title}}</h5></hc-abstract-modal-header>
+   <hc-abstract-modal-body>
+   <p>{{msg}}</p>
+   </hc-abstract-modal-body>
+   <hc-abstract-modal-footer>
+   <button class="btn btn-primary" ng-click="ok()">OK</button>
+   </hc-abstract-modal-footer></script></div>
+   <script type="text/ng-template" id="/views/hc-confirm.html.html">
+	<hc-abstract-modal-header ng-show="showHeader" close-btn=true>
+	    <h5 id="example_source_{{title}}">{{title}}</h5>
+	</hc-abstract-modal-header>
+	<hc-abstract-modal-body>
+	    <p>
+	        {{msg}}
+	    </p>
+	</hc-abstract-modal-body>
+	<hc-abstract-modal-footer>
+	    <button class="btn btn-primary" ng-click="accept()">{{acceptLabel}}</button>
+	    <button class="btn btn-warning" ng-click="reject()">{{rejectLabel}}</button>
+	</hc-abstract-modal-footer>
+</script>
+<script type="text/ng-template" id="/views/abstractheader.html.html">
+	<div class="modal-header" >
+	     <button type="button" ng-show="$closeBtn" ng-click="$dismiss()" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	     <div class="modal-title" data-ng-transclude></div>
+	 </div>
+</script>
+<script type="text/ng-template" id="/views/abstractbody.html.html">
+	<div class="modal-body" data-ng-transclude></div>
+</script>
+<script type="text/ng-template" id="/views/abstractfooter.html.html">
+	<div class="modal-footer" data-ng-transclude></div>
+</script>
+ </script>
+</div>
+<div class="tab-pane" title="app.js">
+<pre class="prettyprint linenums" ng-set-text="app.js"></pre>
+<script type="text/ng-template" id="app.js">
+   angular.module('hcUiApp')
+    .controller('TestController', ['$scope','hcModal', function($scope,hcModal) {
+     	var config={
+   	msg:'This is a custom alert',
+   	header:'Custom alert Header',
+   	onClose:function(){
+   	console.log('you clicked Ok button !!!!');
+   	}
+   	};
+   	$scope.showAlertDialog = function() {
+   	hcModal.alert();
+   	};
+   	}]);
+   angular.module('hcUiApp').controller('HcAlertCtrl', function ($document,$scope, $modalInstance, msg,header) {
+    var _domTitle=$document.title;
+    
+    $scope.ok = function () {
+  		if($scope.showHeader){
+  			$document.title=_domTitle;
+    	}
+  		$modalInstance.close(true);
+  	};
+  	$scope.isHeader=function(h){
+  		return typeof h ==='string';
+  	}
+  	$scope.msg = msg;
+    $scope.showHeader=$scope.isHeader(header);
+    if($scope.showHeader){
+    	$document.title=$scope.title=header;
+    }
+    });
+
+ </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="hcUiApp" ng-set-html="index.html-34" ng-eval-javascript="app.js"></div>
+</div></div>
+</div>

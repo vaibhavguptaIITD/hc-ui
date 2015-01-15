@@ -1,0 +1,50 @@
+<h1><code ng:non-bindable="">hcMultiSelect</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">hcUiApp</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="hcuiapp-directive-page hcuiapp-directive-hcmultiselect-page"><h3 id="description_overview">Overview</h3>
+<p>&#39;hcMultiSelect&#39; directive facilitates user to select one or more options.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$compile">$compile</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ngModel">ngModel</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/hcMultiSelect">hcMultiSelect</a></code>
+</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY hc-multi-select&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+<li>This directive executes at priority level 1.</li>
+</ul>
+</div>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="hcuiapp-directive-page hcuiapp-directive-hcmultiselect-page"><h4 id="example_source">Source</h4>
+<div source-edit="hcUiApp" source-edit-deps="angular.js" source-edit-html="index.html-22" source-edit-css="" source-edit-js="" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-22" ng-html-wrap-loaded="hcUiApp angular.js"></pre>
+<script type="text/ng-template" id="index.html-22">
+  		<form name="dummyForm">
+      <select name="days" id="select_days" ng-model="model.days" hc-multi-select="true" ng-disabled="disabled">
+     <option value="01">Monday</option>
+     <option value="02">Tuesday</option>
+     <option value="03">Wednesday</option>
+     <option value="04">Thursday</option>
+     <option value="05">Friday</option>
+     <option value="06">Saturday</option>
+     <option value="07">Sunday</option>
+    	</select>
+     </form>
+ </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="hcUiApp" ng-set-html="index.html-22" ng-eval-javascript=""></div>
+</div></div>
+</div>
